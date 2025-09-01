@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce | Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background: #2c2c54;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ff6600;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #ff6600;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 80px;
+      background: #f5f7fa;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background: #ff6600;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #e65c00;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Offer Bar -->
+  <div class="top-bar">
+    Use code <strong>NEW20</strong> at checkout to save 20% on your first order!
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">ShopEase</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="signup.html">Signup</a>
+      <a href="signin.html">Signin</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Shop Smarter, Live Better</h1>
+      <p>ShopEase delivers everything you need with just a click. Fast, reliable, and made for you.</p>
+      <a href="signup.html" class="btn">Get Started</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=80" alt="E-commerce Banner">
+    </div>
+  </div>
+</body>
+</html>
