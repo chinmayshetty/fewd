@@ -3,22 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Commerce | Home</title>
+  <title>My E-Commerce Site</title>
   <style>
-    body {
+    /* General Reset */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      line-height: 1.6;
+      background: #f9f9f9;
       color: #333;
     }
 
-    /* Top Bar */
+    /* Header Bar */
     .top-bar {
       background: #2c2c54;
-      color: white;
-      text-align: center;
-      padding: 8px;
+      color: #fff;
+      padding: 8px 15px;
       font-size: 14px;
+      text-align: center;
     }
 
     /* Navbar */
@@ -26,109 +33,155 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 40px;
+      padding: 12px 20px;
       background: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #ddd;
     }
 
-    .logo {
+    .navbar .logo {
       font-size: 22px;
       font-weight: bold;
-      color: #ff6600;
+      color: #0077ff;
     }
 
-    .nav-links a {
+    .navbar nav a {
       margin-left: 20px;
       text-decoration: none;
       color: #333;
+      font-size: 16px;
+    }
+
+    .navbar nav a:hover {
+      color: #0077ff;
+    }
+
+    /* Banner */
+    .banner-container {
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Signin Overlay */
+    .signin-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 350px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .signin-overlay h2 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .signin-overlay label {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .signin-overlay input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
       font-size: 15px;
     }
 
-    .nav-links a:hover {
-      color: #ff6600;
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 60px 80px;
-      background: #f5f7fa;
-    }
-
-    .hero-text {
-      flex: 1;
-      max-width: 500px;
-    }
-
-    .hero-text h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #222;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-
-    .btn {
-      background: #ff6600;
-      color: white;
-      padding: 14px 28px;
+    .form-btn {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
+      background: #0077ff;
+      color: #fff;
       font-size: 16px;
       cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
     }
 
-    .btn:hover {
-      background: #e65c00;
+    .form-btn:hover {
+      background: #005fcc;
     }
 
-    .hero-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
 
-    .hero-image img {
-      max-width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      .navbar nav {
+        margin-top: 10px;
+      }
+
+      .signin-overlay {
+        max-width: 90%;
+        padding: 15px;
+      }
+
+      .signin-overlay h2 {
+        font-size: 20px;
+      }
+
+      .form-btn {
+        font-size: 15px;
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Top Offer Bar -->
+
+  <!-- Top discount bar -->
   <div class="top-bar">
-    Use code <strong>NEW20</strong> at checkout to save 20% on your first order!
+    Use code <strong>NEW20</strong> to get 20% off your first order!
   </div>
 
   <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo">ShopEase</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="signup.html">Signup</a>
-      <a href="signin.html">Signin</a>
+  <header class="navbar">
+    <div class="logo">MyShop</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Deals</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Banner with Sign In -->
+  <div class="banner-container">
+    <img src="banner.jpg" alt="E-commerce Banner" class="banner">
+
+    <div class="signin-overlay">
+      <h2>Sign In</h2>
+      <form action="index.html" method="get">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="form-btn">Sign In</button>
+      </form>
     </div>
   </div>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <div class="hero-text">
-      <h1>Shop Smarter, Live Better</h1>
-      <p>ShopEase delivers everything you need with just a click. Fast, reliable, and made for you.</p>
-      <a href="signup.html" class="btn">Get Started</a>
-    </div>
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=80" alt="E-commerce Banner">
-    </div>
-  </div>
 </body>
 </html>
